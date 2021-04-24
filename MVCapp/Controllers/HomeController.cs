@@ -6,26 +6,28 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using MVCapp.Data;
 
 namespace MVCapp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ProjectDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController( ProjectDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+            var project = _context.Projects
+               .OrderByDescending(m => m.Id).Take(6);
+            if (project == null)
+            {
+                return Redirect("Projects/create");
+            }
+            return View(project);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

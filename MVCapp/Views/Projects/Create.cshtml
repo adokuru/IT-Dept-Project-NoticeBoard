@@ -4,35 +4,47 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
 
-<h4>Project</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<section class="relative py-16  min-w-screen animation-fade animation-delay">
+    <div class="container px-0 px-8 mx-auto sm:px-12 xl:px-5">
+        <p class="text-3xl font-bold text-left text-white uppercase sm:mx-6 sm:text-center sm:text-normal sm:font-bold">
+            Create Project
+        </p>
+        <header class="flex items-center justify-between px-0 px-8 mx-auto sm:px-12 xl:px-5">
+            <a asp-controller="Projects" asp-action="Index" class="text-lg leading-6 font-medium text-white"> Back to List</a>
+
+        </header>
+
+        <div class="w-full px-6 py-6 mx-auto mt-10 bg-white border border-gray-200 rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="flex flex-col items-start justify-start w-full h-full p-10 lg:p-16 xl:p-24">
+                    <h4 class="w-full text-3xl font-bold">Create a project</h4>
+                    <div class="relative w-full mt-10 space-y-8">
+                        <div class="relative">
+                            <label asp-for="Title" class="font-medium text-gray-900">Title</label>
+                            <input asp-for="Title" type="text" class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50" placeholder="Enter  Title">
+                            
+                        </div>
+                        <div class="relative">
+                            <label asp-for="Description" class="font-medium text-gray-900">Description</label>
+                            <input asp-for="Description" type="text" class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50" placeholder="Enter Description">
+                        </div>
+                       
+                        <div class="relative">
+                            <input type="submit" value="Create Project" class="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-blue-600 rounded-lg hover:bg-blue-700 ease">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</section>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+

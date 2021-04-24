@@ -112,23 +112,7 @@ namespace MVCapp.Controllers
             return View(project);
         }
 
-        // GET: Projects/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var project = await _context.Projects
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (project == null)
-            {
-                return NotFound();
-            }
-
-            return View(project);
-        }
+        
 
         // POST: Projects/Delete/5
         [HttpPost, ActionName("Delete")]
