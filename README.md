@@ -2,17 +2,16 @@
 
 # IT-Dept-Project-NoticeBoard
 
-## Goto Appsettings and replace Server=DAVID-GHENA to your local sqlserver Server-Name and update-database
+## Installation Intructions
 
+Goto Appsettings and replace Server=DAVID-GHENA to your local sqlserver Server-Name and update-database
 Make sure to install all nuget packages 
 
-## File Structure
-
-Within the download you'll find the following directories and files:
-
+## ToDo
 ```
-### IT-Dept-Project-NoticeBoard ToDo
+### IT-Dept-Project-NoticeBoard 
 Employee Table and Foregin key addition to Projects Table to Assign Projects to Employees
+Auth
 
 ```
 
