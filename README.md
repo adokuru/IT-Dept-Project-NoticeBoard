@@ -12,9 +12,9 @@ Within the download you'll find the following directories and files:
 
 ```
 ### IT-Dept-Project-NoticeBoard ToDo
+Employee Table and Foregin key addition to Projects Table to Assign Projects to Employees
 
 ```
-Employee Table and Foregin key addition to Projects Table to Assign Projects to Employees
 
 
 
