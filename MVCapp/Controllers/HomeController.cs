@@ -23,10 +23,7 @@ namespace MVCapp.Controllers
         {
             var project = _context.Projects
                .OrderByDescending(m => m.Id).Take(6);
-            if (project == null)
-            {
-                return Redirect("Projects/create");
-            }
+            
             return View(project);
         }
 
