@@ -13,8 +13,9 @@ Make sure to install all nuget packages
 ## ToDo
 ```
 ### IT-Dept-Project-NoticeBoard 
-Employee Table and Foregin key addition to Projects Table to Assign Projects to Employees
-Auth
+1. Employee Table and Foregin key addition to Projects Table to Assign Projects to Employees
+2. Auth
+3. ReactJs Verison
 
 ```
 
